@@ -1,5 +1,5 @@
 {% set name = "hashquery" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hashquery-{{ version }}.tar.gz
-  sha256: 94837e6c75fc7ce27c5edab2d505ac21a246e04bcfa0412952c937314366b0a3
+  sha256: fed26f40c335d4eabf23ff80f2ec9516201dff83b0c2ddf8d9eefb749e30125c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -38,7 +38,7 @@ test:
 
 about:
   home: https://github.com/hashboard-hq/hashquery
-  summary: A Python framework for defining and querying BI models in your data warehouse 
+  summary: A Python framework for defining and querying BI models in your data warehouse
   license: Apache-2.0
   license_file: LICENSE
 
